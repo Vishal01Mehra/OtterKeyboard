@@ -1,7 +1,7 @@
 # OtterKeyboard
 ![](https://github.com/Vishal01Mehra/OtterKeyBoard/blob/main/Resource/otterKeyBoard.jpg)
 
-LaserKitty is an interesting project for your pet animals especially for cats. It shoots a laser on the floor and if the pet reaches the point, it moves the laser pointer to a random coordinate and repeats the process 
+This Library is based on [ESP32-BLE-Keyboard](https://github.com/T-vK/ESP32-BLE-Keyboard) library and impliments BLE(Bluetooth-Low-Energy) Keyboard for the OtterBoard. Send Keystrokes, Commands, Media Controls, etc.
 
 ## Contributing
 Contributions are welcome. For major changes, please open an issue first to discuss what you would like to change.
