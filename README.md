@@ -10,4 +10,4 @@ Contributions are welcome. For major changes, please open an issue first to disc
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ## Base Library 
-[ESP32-BLE-Keeyboard](https://github.com/T-vK/ESP32-BLE-Keyboard)
+[ESP32-BLE-Keyboard](https://github.com/T-vK/ESP32-BLE-Keyboard)
