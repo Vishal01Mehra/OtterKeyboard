@@ -21,7 +21,7 @@ This Library is based on [ESP32-BLE-Keyboard](https://github.com/T-vK/ESP32-BLE-
 
 ``` C++
 /**
- * This example turns the ESP32 into a Bluetooth LE keyboard that writes the words, presses Enter, presses a media key and then Ctrl+Alt+Delete
+ * This example turns the OtterBorad into a Bluetooth Low Energy keyboard that writes the words, presses Enter, presses a media key, and then Ctrl+Alt+Delete
  */
 #include <OtterKeyboard.h>
 
