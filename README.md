@@ -17,6 +17,56 @@ This Library is based on [ESP32-BLE-Keyboard](https://github.com/T-vK/ESP32-BLE-
  - [x] Compatible with MacOS X (not stable, some people have issues, doesn't work with old devices)
  - [x] Compatible with iOS (not stable, some people have issues, doesn't work with old devices)
 
+## Example
+
+``` C++
+/**
+ * This example turns the ESP32 into a Bluetooth LE keyboard that writes the words, presses Enter, presses a media key and then Ctrl+Alt+Delete
+ */
+#include <OtterKeyboard.h>
+
+OtterKeyboard OtterKeyboard;
+
+void setup() {
+  Serial.begin(115200);
+  Serial.println("Starting BLE work!");
+  OtterKeyboard.begin();
+}
+
+void loop() {
+  if(OtterKeyboard.isConnected()) {
+    Serial.println("Sending 'Hello world'...");
+    OtterKeyboard.print("Hello world");
+
+    delay(1000);
+
+    Serial.println("Sending Enter key...");
+    OtterKeyboard.write(KEY_RETURN);
+
+    delay(1000);
+
+    Serial.println("Sending Play/Pause media key...");
+    OtterKeyboard.write(KEY_MEDIA_PLAY_PAUSE);
+
+    delay(1000);
+    
+   //
+   // Below is an example of pressing multiple keyboard modifiers 
+   // which by default is commented out. 
+   // 
+   /* Serial.println("Sending Ctrl+Alt+Delete...");
+    OtterKeyboard.press(KEY_LEFT_CTRL);
+    OtterKeyboard.press(KEY_LEFT_ALT);
+    OtterKeyboard.press(KEY_DELETE);
+    delay(100);
+    OtterKeyboard.releaseAll();
+    */
+
+  }
+  Serial.println("Waiting 5 seconds...");
+  delay(5000);
+}
+```
 ## License
 This product is open source!
 
